@@ -14,6 +14,8 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+      console.log("About to load twilio...");
+      var client = Npm.require('twilio')("key", "secret");
+      console.log("Everything went better than expected!");
   });
 }
